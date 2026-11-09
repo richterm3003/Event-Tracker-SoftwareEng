@@ -1,0 +1,7 @@
+{
+	"InstallScripts" : 
+	[
+		"C:/Algorithms Class/Sudoku/Event-Tracker-SoftwareEng/build/_deps/googletest-subbuild/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

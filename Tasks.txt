@@ -1,0 +1,26 @@
+1.	Story points for software engineering
+2.	Insert Event
+3.	Filter Event
+4.	View Events
+5.	Account/login system
+6.	Calendar UI
+7.	Invite to event
+8.	Remove event
+9.	Set time slots
+10.	Admin account
+11.	Regular account
+12.	Event History
+13.	Event description
+14.	Notification system
+15.	Log out system
+16.	Edit events
+17.	State if you are attending or not
+18.	Separate event trackers for organization.
+19.	Ability to color code events
+20.	Bug fixing
+21.	Changing UI colors
+22.	Automatic old event deletion
+23.	Adding images to event UI
+24.	Time and place reservation
+25.	Account deletion
+26.	Password hashing protection
