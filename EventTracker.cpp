@@ -7,6 +7,9 @@ struct Event {
     string date;
     string time;
 };
+std::vector<string> months31 = {"01", "03", "05", "07", "08", "10", "12"};
+std::vector<string> months30 = {"04", "06", "09", "11"};
+std::vector<string> monthsFeb = {"02"};
 
 vector<Event> events;
 // Function to validate the date input by the user
@@ -49,6 +52,30 @@ bool validateDate(string month, string day, string year) {
     }
     else if(year < "2026" || year > "2100") {
         cout << "Invalid year. Please enter a value between 2026 and 2100." << endl;
+        return false;
+    }
+
+
+
+    // Check for months with 30 days
+    for(int i=0; i<months30.size(); i++) {
+        if(month == months30[i] && day == "31") {
+            cout << "Invalid date. " << month << " has only 30 days." << endl;
+            return false;
+        }
+    }
+    // Check for February
+    if(month == "02" && day > "28") {
+        int yearNumber = stoi(year);
+        if(yearNumber % 4 == 0 && (yearNumber % 100 != 0 || yearNumber % 400 == 0)) {
+            if(day == "29") {
+                return true; // Leap year
+            } else {
+                cout << "Invalid date. February has only 29 days in a leap year." << endl;
+                return false;
+            }
+        }
+        cout << "Invalid date. February has only 28 days." << endl;
         return false;
     }
 

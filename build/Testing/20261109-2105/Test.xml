@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Site BuildName="(empty)"
+	BuildStamp="20261109-2105-Experimental"
+	Name="(empty)"
+	Generator="ctest-4.4.4"
+	CompilerName=""
+	CompilerVersion=""
+	OSName="Windows"
+	Hostname="eStout-Q5040HKM"
+	OSRelease="10.0.26200"
+	OSVersion="Windows 10"
+	OSPlatform="AMD64"
+	Is64Bits="1"
+	VendorString="AuthenticAMD"
+	VendorID="Advanced Micro Devices"
+	FamilyID="15"
+	ModelID="12"
+	ModelName="AMD Ryzen 5 8540U w/ Radeon 740M Graphics"
+	ProcessorCacheSize="64"
+	NumberOfLogicalCPU="12"
+	NumberOfPhysicalCPU="6"
+	TotalVirtualMemory="21504"
+	TotalPhysicalMemory="15645"
+	LogicalProcessorsPerPhysical="2"
+	ProcessorClockFrequency="3201.000000"
+	>
+	<Testing>
+		<StartDateTime>Nov 09 15:42 Central Standard Time</StartDateTime>
+		<StartTestTime>1794260537</StartTestTime>
+		<TestList/>
+		<EndDateTime>Nov 09 15:42 Central Standard Time</EndDateTime>
+		<EndTestTime>1794260537</EndTestTime>
+		<ElapsedMinutes>0</ElapsedMinutes>
+	</Testing>
+</Site>

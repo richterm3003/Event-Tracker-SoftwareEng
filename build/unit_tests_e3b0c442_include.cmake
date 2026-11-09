@@ -1,0 +1,5 @@
+if(EXISTS "C:/Algorithms Class/Sudoku/Event-Tracker-SoftwareEng/build/unit_tests_e3b0c442_tests.cmake")
+  include("C:/Algorithms Class/Sudoku/Event-Tracker-SoftwareEng/build/unit_tests_e3b0c442_tests.cmake")
+else()
+  add_test(unit_tests_NOT_BUILT unit_tests_NOT_BUILT)
+endif()

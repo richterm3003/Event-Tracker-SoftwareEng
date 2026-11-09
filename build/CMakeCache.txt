@@ -218,7 +218,7 @@ CMAKE_PROJECT_DESCRIPTION:STATIC=
 CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=Software
+CMAKE_PROJECT_NAME:STATIC=SoftwareEngineering
 
 //Value Computed by CMake
 CMAKE_PROJECT_SPDX_LICENSE:STATIC=
@@ -357,6 +357,15 @@ GTEST_HAS_ABSL:BOOL=OFF
 //Enable installation of googletest. (Projects embedding googletest
 // may want to turn this OFF.)
 INSTALL_GTEST:BOOL=ON
+
+//Value Computed by CMake
+SoftwareEngineering_BINARY_DIR:STATIC=C:/Algorithms Class/Sudoku/Event-Tracker-SoftwareEng/build
+
+//Value Computed by CMake
+SoftwareEngineering_IS_TOP_LEVEL:STATIC=ON
+
+//Value Computed by CMake
+SoftwareEngineering_SOURCE_DIR:STATIC=C:/Algorithms Class/Sudoku/Event-Tracker-SoftwareEng
 
 //Value Computed by CMake
 Software_BINARY_DIR:STATIC=C:/Algorithms Class/Sudoku/Event-Tracker-SoftwareEng/build
@@ -559,7 +568,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=1
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=4
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

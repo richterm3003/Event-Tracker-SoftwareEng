@@ -1,0 +1,2 @@
+C:\msys64\ucrt64\bin\ar.exe qc libEventTracker_lib.a CMakeFiles/EventTracker_lib.dir/EventTracker.cpp.obj
+C:\msys64\ucrt64\bin\ranlib.exe libEventTracker_lib.a

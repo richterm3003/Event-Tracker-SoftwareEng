@@ -1,0 +1,22 @@
+{
+  "tests": 2,
+  "name": "AllTests",
+  "testsuites": [
+    {
+      "name": "DateTest",
+      "tests": 2,
+      "testsuite": [
+        {
+          "name": "HandlesBroadInvalidDates",
+          "file": "C:\\Algorithms Class\\Sudoku\\Event-Tracker-SoftwareEng\\EventTrackerTests.cpp",
+          "line": 6
+        },
+        {
+          "name": "HandlesDaysInMonths",
+          "file": "C:\\Algorithms Class\\Sudoku\\Event-Tracker-SoftwareEng\\EventTrackerTests.cpp",
+          "line": 20
+        }
+      ]
+    }
+  ]
+}
