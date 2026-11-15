@@ -197,7 +197,7 @@ void sortNames() {
                 }
 void sortEvents() {
 
-        cout << "Sort Events by 'Date' or 'Name'?, or 'Exit' to return to the main menu." << endl;
+        cout << "Sort Events by 'Date' or 'Name'?, 'Edit' an event, 'Delete' an event, or 'Exit' to return to the main menu." << endl;
         string input;
         cin >> input;
         if(input == "Date" || input == "date")
@@ -209,6 +209,29 @@ void sortEvents() {
         {
             cout << "Sorting events by name..." << endl;
             sortNames();
+        }
+        else if(input == "Edit" || input == "edit")
+        {
+            editEvent();
+        }
+        else if(input == "Delete" || input == "delete")
+        {
+            deleteEvent();
+        }
+        else if(input == "Exit" || input == "exit")
+        {
+            cout << "Back to main menu..." << endl;
+            mainMenu();
+        }
+        else if(input == "Edit" || input == "edit")
+        {
+            cout << "Editing an event..." << endl;
+            editEvent();
+        }
+        else if(input == "Delete" || input == "delete")
+        {
+            cout << "Deleting an event..." << endl;
+            deleteEvent();
         }
         else if(input == "Exit" || input == "exit")
         {
@@ -267,4 +290,103 @@ string toLowerCase(string str) {
         str[i] = tolower(str[i]);
     }
     return str;
+}
+
+void editEvent() {
+cout << "Enter name of the event to edit: " << endl;
+                    string eventName;
+                    string lowerCaseEventName;
+                    cin.ignore();
+                    getline(cin, eventName);        
+                    lowerCaseEventName = toLowerCase(eventName);
+                    bool found = false;
+                    for(int i = 0; i < events.size(); i++)
+                    {
+                        if(toLowerCase(events[i].name) == lowerCaseEventName)
+                        {
+                            bool finishedEditing = false;
+                            while(finishedEditing == false) {
+                            cout << "Event: " << events[i].name << ", Date: " << events[i].date << ", Time: " << events[i].time << endl;
+                            found = true;
+                            cout << "What would you like to edit? ('Name', 'Date', 'Time' or 'Done' to finish)" << endl;
+                            string editChoice;
+                            cin >> editChoice;
+                            if(editChoice == "Name" || editChoice == "name") {
+                                cout << "Enter new name: " << endl;
+                                string newName;
+                                cin.ignore();
+                                getline(cin, newName);
+                                events[i].name = newName;
+                            }
+                            else if(editChoice == "Date" || editChoice == "date") {
+                                cout << "Enter new date (MM DD YYYY): " << endl;
+                                string newMonth, newDay, newYear;
+                                cin >> newMonth >> newDay >> newYear;
+                                while (!validateDate(newMonth, newDay, newYear)) {
+                                    cout << "Enter new date (MM DD YYYY): " << endl;
+                                    cin >> newMonth >> newDay >> newYear;
+                                    validateDate(newMonth, newDay, newYear);
+                                }
+                                events[i].date = newMonth + "/" + newDay + "/" + newYear;
+                                events[i].month = newMonth;
+                                events[i].day = newDay;
+                                events[i].year = newYear;
+                            }
+                            else if(editChoice == "Time" || editChoice == "time") {
+                                cout << "Enter new time (HH:MM): " << endl;
+                                string newTime;
+                                cin >> newTime;
+                                events[i].time = newTime;
+                            }
+                            else if (editChoice == "Done" || editChoice == "done") {
+                                finishedEditing = true;
+                                cout << "Finished editing event." << endl;
+                                listEvents();
+                            }
+                            else {
+                                cout << "Invalid choice. Try again." << endl;
+                            }
+                        }
+                    }
+                        
+                    }
+                    if(!found)
+                    {
+                        cout << "Event not found." << endl;
+                        listEvents();
+                    }
+}
+void deleteEvent() {
+cout << "Enter name of the event to delete: " << endl;
+                    string eventName;
+                    string lowerCaseEventName;
+                    cin.ignore();
+                    getline(cin, eventName);        
+                    lowerCaseEventName = toLowerCase(eventName);
+                    bool found = false;
+                    for(int i = 0; i < events.size(); i++)
+                    {
+                        if(toLowerCase(events[i].name) == lowerCaseEventName)
+                        {
+                            cout << "Event: " << events[i].name << ", Date: " << events[i].date << ", Time: " << events[i].time << endl;
+                            found = true;
+                            cout << "Are you sure you want to delete this event? ('Yes', 'No')" << endl;
+                            string confirmation;
+                            cin >> confirmation;
+                            if(confirmation == "yes" || confirmation == "Yes") {
+                                events.erase(events.begin() + i);
+                                cout << "Event deleted." << endl;
+                                listEvents();
+                            } else {
+                                cout << "Event not deleted." << endl;
+                                listEvents();
+                            }
+                        }
+                        
+                    }
+                    if(!found)
+                    {
+                        cout << "Event not found." << endl;
+                        listEvents();
+                    }
 }

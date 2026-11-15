@@ -19,6 +19,8 @@ bool validateDate(string month, string day, string year);
 void createEvent();
 void listEvents();
 void sortDates();
+void deleteEvent();
+void editEvent();
 void sortNames();
 void sortEvents();
 void mainMenu();
