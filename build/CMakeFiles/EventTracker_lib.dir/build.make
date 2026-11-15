@@ -86,17 +86,34 @@ CMakeFiles/EventTracker_lib.dir/EventTracker.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/EventTracker_lib.dir/EventTracker.cpp.s"
 	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Algorithms Class\Sudoku\Event-Tracker-SoftwareEng\EventTracker.cpp" -o CMakeFiles\EventTracker_lib.dir\EventTracker.cpp.s
 
+CMakeFiles/EventTracker_lib.dir/Functions.cpp.obj: CMakeFiles/EventTracker_lib.dir/flags.make
+CMakeFiles/EventTracker_lib.dir/Functions.cpp.obj: CMakeFiles/EventTracker_lib.dir/includes_CXX.rsp
+CMakeFiles/EventTracker_lib.dir/Functions.cpp.obj: C:/Algorithms\ Class/Sudoku/Event-Tracker-SoftwareEng/Functions.cpp
+CMakeFiles/EventTracker_lib.dir/Functions.cpp.obj: CMakeFiles/EventTracker_lib.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Algorithms Class\Sudoku\Event-Tracker-SoftwareEng\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/EventTracker_lib.dir/Functions.cpp.obj"
+	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/EventTracker_lib.dir/Functions.cpp.obj -MF CMakeFiles\EventTracker_lib.dir\Functions.cpp.obj.d -o CMakeFiles\EventTracker_lib.dir\Functions.cpp.obj -c "C:\Algorithms Class\Sudoku\Event-Tracker-SoftwareEng\Functions.cpp"
+
+CMakeFiles/EventTracker_lib.dir/Functions.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/EventTracker_lib.dir/Functions.cpp.i"
+	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Algorithms Class\Sudoku\Event-Tracker-SoftwareEng\Functions.cpp" > CMakeFiles\EventTracker_lib.dir\Functions.cpp.i
+
+CMakeFiles/EventTracker_lib.dir/Functions.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/EventTracker_lib.dir/Functions.cpp.s"
+	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Algorithms Class\Sudoku\Event-Tracker-SoftwareEng\Functions.cpp" -o CMakeFiles\EventTracker_lib.dir\Functions.cpp.s
+
 # Object files for target EventTracker_lib
 EventTracker_lib_OBJECTS = \
-"CMakeFiles/EventTracker_lib.dir/EventTracker.cpp.obj"
+"CMakeFiles/EventTracker_lib.dir/EventTracker.cpp.obj" \
+"CMakeFiles/EventTracker_lib.dir/Functions.cpp.obj"
 
 # External object files for target EventTracker_lib
 EventTracker_lib_EXTERNAL_OBJECTS =
 
 libEventTracker_lib.a: CMakeFiles/EventTracker_lib.dir/EventTracker.cpp.obj
+libEventTracker_lib.a: CMakeFiles/EventTracker_lib.dir/Functions.cpp.obj
 libEventTracker_lib.a: CMakeFiles/EventTracker_lib.dir/build.make
 libEventTracker_lib.a: CMakeFiles/EventTracker_lib.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="C:\Algorithms Class\Sudoku\Event-Tracker-SoftwareEng\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libEventTracker_lib.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="C:\Algorithms Class\Sudoku\Event-Tracker-SoftwareEng\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX static library libEventTracker_lib.a"
 	$(CMAKE_COMMAND) -P CMakeFiles\EventTracker_lib.dir\cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\EventTracker_lib.dir\link.txt --verbose=$(VERBOSE)
 

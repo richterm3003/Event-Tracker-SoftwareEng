@@ -296,6 +296,30 @@ EventTrackerTests.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\unit_tests.dir\build.make CMakeFiles/unit_tests.dir/EventTrackerTests.cpp.s
 .PHONY : EventTrackerTests.cpp.s
 
+Functions.obj: Functions.cpp.obj
+.PHONY : Functions.obj
+
+# target to build an object file
+Functions.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EventTracker_lib.dir\build.make CMakeFiles/EventTracker_lib.dir/Functions.cpp.obj
+.PHONY : Functions.cpp.obj
+
+Functions.i: Functions.cpp.i
+.PHONY : Functions.i
+
+# target to preprocess a source file
+Functions.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EventTracker_lib.dir\build.make CMakeFiles/EventTracker_lib.dir/Functions.cpp.i
+.PHONY : Functions.cpp.i
+
+Functions.s: Functions.cpp.s
+.PHONY : Functions.s
+
+# target to generate assembly for a file
+Functions.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EventTracker_lib.dir\build.make CMakeFiles/EventTracker_lib.dir/Functions.cpp.s
+.PHONY : Functions.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -321,6 +345,9 @@ help:
 	@echo ... EventTrackerTests.obj
 	@echo ... EventTrackerTests.i
 	@echo ... EventTrackerTests.s
+	@echo ... Functions.obj
+	@echo ... Functions.i
+	@echo ... Functions.s
 .PHONY : help
 
 

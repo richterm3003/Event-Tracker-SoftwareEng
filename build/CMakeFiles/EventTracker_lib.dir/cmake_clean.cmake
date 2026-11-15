@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/EventTracker_lib.dir/EventTracker.cpp.obj"
   "CMakeFiles/EventTracker_lib.dir/EventTracker.cpp.obj.d"
+  "CMakeFiles/EventTracker_lib.dir/Functions.cpp.obj"
+  "CMakeFiles/EventTracker_lib.dir/Functions.cpp.obj.d"
   "libEventTracker_lib.a"
   "libEventTracker_lib.pdb"
 )

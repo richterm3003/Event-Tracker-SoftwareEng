@@ -7,6 +7,12 @@
 },
 {
   "directory": "C:/Algorithms Class/Sudoku/Event-Tracker-SoftwareEng/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe  @CMakeFiles\\EventTracker_lib.dir\\includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\EventTracker_lib.dir\\Functions.cpp.obj -c \"C:\\Algorithms Class\\Sudoku\\Event-Tracker-SoftwareEng\\Functions.cpp\"",
+  "file": "C:/Algorithms Class/Sudoku/Event-Tracker-SoftwareEng/Functions.cpp",
+  "output": "CMakeFiles/EventTracker_lib.dir/Functions.cpp.obj"
+},
+{
+  "directory": "C:/Algorithms Class/Sudoku/Event-Tracker-SoftwareEng/build",
   "command": "C:\\msys64\\ucrt64\\bin\\g++.exe  @CMakeFiles\\unit_tests.dir\\includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\unit_tests.dir\\EventTrackerTests.cpp.obj -c \"C:\\Algorithms Class\\Sudoku\\Event-Tracker-SoftwareEng\\EventTrackerTests.cpp\"",
   "file": "C:/Algorithms Class/Sudoku/Event-Tracker-SoftwareEng/EventTrackerTests.cpp",
   "output": "CMakeFiles/unit_tests.dir/EventTrackerTests.cpp.obj"
