@@ -9,6 +9,7 @@ struct Event {
     string day;
     string year;
     string time;
+    string description;
 };
 extern vector<string> months31;
 extern vector<string> months30;
@@ -24,4 +25,5 @@ void editEvent();
 void sortNames();
 void sortEvents();
 void mainMenu();
+string shortenDescription(string description);
 string toLowerCase(string str);

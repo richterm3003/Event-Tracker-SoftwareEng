@@ -97,8 +97,12 @@ void createEvent()
     std::cout << "Enter the event time in military format (HH:MM): ";
     string eventTime;
     cin >> eventTime;
+    cout << "Enter the event description: ";
+    string eventDescription;
+    cin.ignore();
+    getline(cin, eventDescription);
     std::cout << "Event '" << eventName << "' has been created." << std::endl;
-    events.push_back({eventName, eventDate, eventDay, eventMonth, eventYear, eventTime});
+    events.push_back({eventName, eventDate, eventDay, eventMonth, eventYear, eventTime, eventDescription});
     mainMenu();
 }
 void listEvents()
@@ -111,7 +115,7 @@ void listEvents()
     {
         for (const auto& event : events)
         {
-            cout << "Event: " << event.name << ", Date: " << event.date << ", Time: " << event.time << endl;
+            cout << "Event: " << event.name << ", Date: " << event.date << ", Time: " << event.time << ", Description: " << shortenDescription(event.description) << endl;
         }
     }
     sortEvents();
@@ -166,7 +170,7 @@ bool swapped = true;
             }
             for (const auto& event : events)
             {
-                cout << "Event: " << event.name << ", Date: " << event.date << ", Time: " << event.time << endl;
+                cout << "Event: " << event.name << ", Date: " << event.date << ", Time: " << event.time << ", Description: " << shortenDescription(event.description) << endl;
             }
             sortEvents();
         }
@@ -183,7 +187,7 @@ void sortNames() {
                     {
                         if(toLowerCase(events[i].name) == lowerCaseEventName)
                         {
-                            cout << "Event: " << events[i].name << ", Date: " << events[i].date << ", Time: " << events[i].time << endl;
+                            cout << "Event: " << events[i].name << ", Date: " << events[i].date << ", Time: " << events[i].time << ", Description: " << events[i].description << endl;
                             found = true;
                             sortEvents();
                         }
@@ -250,11 +254,11 @@ void mainMenu()
 {
     while(events.empty())
     {
-    events.push_back({"Test1", "02/02/2027", "02", "02", "2027", "12:00"});
-    events.push_back({"Test2", "02/02/2026", "02", "02", "2026", "12:00"});
-    events.push_back({"Test3", "02/01/2026", "02", "01", "2026", "12:30"});
-    events.push_back({"Test4", "02/01/2026", "02", "01", "2026", "12:00"});
-    events.push_back({"Test5", "03/01/2026", "03", "01", "2026", "02:30"});
+    events.push_back({"Test1", "02/02/2027", "02", "02", "2027", "12:00", "This is a test event."});
+    events.push_back({"Test2", "02/02/2026", "02", "02", "2026", "12:00", "This is another test event."});
+    events.push_back({"Test3", "02/01/2026", "02", "01", "2026", "12:30", "This is a test event to check that the 32 character limit is working for listing events but not for specific search. BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH."});
+    events.push_back({"Test4", "02/01/2026", "02", "01", "2026", "12:00", "This is a fourth test event."});
+    events.push_back({"Test5", "03/01/2026", "03", "01", "2026", "02:30", "This is a fifth test event."});
     }
     std::cout << "Type 'Create' to make an event, 'List' to see all events, or 'Exit' to quit." << std::endl;
     std::string input;
@@ -306,9 +310,9 @@ cout << "Enter name of the event to edit: " << endl;
                         {
                             bool finishedEditing = false;
                             while(finishedEditing == false) {
-                            cout << "Event: " << events[i].name << ", Date: " << events[i].date << ", Time: " << events[i].time << endl;
+                            cout << "Event: " << events[i].name << ", Date: " << events[i].date << ", Time: " << events[i].time << ", Description: " << events[i].description << endl;
                             found = true;
-                            cout << "What would you like to edit? ('Name', 'Date', 'Time' or 'Done' to finish)" << endl;
+                            cout << "What would you like to edit? ('Name', 'Date', 'Time', 'Description' or 'Done' to finish)" << endl;
                             string editChoice;
                             cin >> editChoice;
                             if(editChoice == "Name" || editChoice == "name") {
@@ -342,6 +346,13 @@ cout << "Enter name of the event to edit: " << endl;
                                 finishedEditing = true;
                                 cout << "Finished editing event." << endl;
                                 listEvents();
+                            }
+                            else if (editChoice == "Description" || editChoice == "description") {
+                                cout << "Enter new description: " << endl;
+                                string newDescription;
+                                cin.ignore();
+                                getline(cin, newDescription);
+                                events[i].description = newDescription;
                             }
                             else {
                                 cout << "Invalid choice. Try again." << endl;
@@ -388,5 +399,13 @@ cout << "Enter name of the event to delete: " << endl;
                     {
                         cout << "Event not found." << endl;
                         listEvents();
-                    }
+    }
+}
+
+string shortenDescription(string description) {
+    if (description.length() > 32) {
+        return description.substr(0, 32) + "...";
+    } else {
+        return description;
+    }
 }
