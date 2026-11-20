@@ -1,4 +1,5 @@
 #include "EventManager.h"
+#include "Auth.h"
 #include <cctype>
 
 vector<string> months31 = {"01", "03", "05", "07", "08", "10", "12"};
@@ -260,20 +261,23 @@ void mainMenu()
     events.push_back({"Test4", "02/01/2026", "02", "01", "2026", "12:00", "This is a fourth test event."});
     events.push_back({"Test5", "03/01/2026", "03", "01", "2026", "02:30", "This is a fifth test event."});
     }
-    std::cout << "Type 'Create' to make an event, 'List' to see all events, or 'Exit' to quit." << std::endl;
+    std::cout << "Type 'Create' to make an event, 'List' to see all events, 'Logout' to log out, or 'Exit' to quit." << std::endl;
     std::string input;
     std::cin >> input;
     if(input == "Create" || input == "create")
     {
         createEvent();
-        
     }
     else if(input == "List" || input == "list")
     {
         std::cout << "Listing all events..." << std::endl;
-
         listEvents();
-        
+    }
+    else if(input == "Logout" || input == "logout")
+    {
+        std::cout << "Logged out." << std::endl;
+        logout();
+        return;
     }
     else if(input == "Exit" || input == "exit")
     {
@@ -285,17 +289,13 @@ void mainMenu()
         std::cout << "Invalid input. Please try again." << std::endl;
         mainMenu();
     }
-
-
 }
-
 string toLowerCase(string str) {
     for (int i = 0; i < str.length(); i++) {
         str[i] = tolower(str[i]);
     }
     return str;
 }
-
 void editEvent() {
 cout << "Enter name of the event to edit: " << endl;
                     string eventName;
